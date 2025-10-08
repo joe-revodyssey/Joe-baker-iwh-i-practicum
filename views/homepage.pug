@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+    a(href='/update-cobj') Add to this table
+    table(border='1', cellpadding='5', cellspacing='0')
+      thead
+        tr
+          th Voyage Name
+          th Captain
+          th Crew Count
+          th Home Port
+          th Vessel Name
+          th Voyage Goal
+      tbody
+        each record in data
+          tr
+            td= record.properties.voyage_name || ''
+            td= record.properties.captain || ''
+            td= record.properties.crew_count || ''
+            td= record.properties.home_port || ''
+            td= record.properties.vessel_name || ''
+            td= record.properties.voyage_goal || ''

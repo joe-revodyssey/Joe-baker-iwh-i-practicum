@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+    a(href='/') Return to the homepage
+    form(action='/update-cobj', method='POST')
+      div
+        label(for='voyage_name') Voyage Name:
+        input(type='text', name='voyage_name', required)
+      div
+        label(for='captain') Captain:
+        input(type='text', name='captain', required)
+      div
+        label(for='crew_count') Crew Count:
+        input(type='number', name='crew_count', required)
+      div
+        label(for='home_port') Home Port:
+        input(type='text', name='home_port', required)
+      div
+        label(for='vessel_name') Vessel Name:
+        input(type='text', name='vessel_name', required)
+      div
+        label(for='voyage_goal') Voyage Goal:
+        textarea(name='voyage_goal', rows='4', required)
+      div
+        button(type='submit') Submit
